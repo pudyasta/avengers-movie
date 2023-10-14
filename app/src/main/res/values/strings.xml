@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">uts</string>
+    <string name="pesan_tiket_dekat_dan_mudah_dengan_sekali_klik">Pesan tiket dekat dan mudah dengan sekali klik</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="masuk">Masuk</string>
+    <string name="logintoreg">Belum punya akun? Registrasi</string>
+    <string name="poster">Poster</string>
+    <string name="avengers_endgame">Avengers : Endgame</string>
+    <string name="drama_fantasy_scyfy">Drama, Fantasy, ScyFy</string>
+    <string name="descmov">Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU).</string>
+    <string name="pesan_tiket">Pesan tiket</string>
+    <string name="_16">16+</string>
+    <string name="min">min</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="bioskop">Bioskop</string>
+    <string name="tambah_payment_method">Tambah Payment Method</string>
+</resources>
