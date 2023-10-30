@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">uts</string>
+    <string name="app_name">Avengers Movie</string>
     <string name="pesan_tiket_dekat_dan_mudah_dengan_sekali_klik">Pesan tiket dekat dan mudah dengan sekali klik</string>
     <string name="selamat_datang">Selamat Datang</string>
     <string name="username">Username</string>
@@ -18,4 +18,7 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="bioskop">Bioskop</string>
     <string name="tambah_payment_method">Tambah Payment Method</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="films_count">Films Count</string>
 </resources>

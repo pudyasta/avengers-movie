@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:textSize="28sp"/>
 
-        <TextView
+       <TextView
            android:id="@+id/login_desc_text"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
