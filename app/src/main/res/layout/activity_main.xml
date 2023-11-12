@@ -39,7 +39,7 @@
         android:id="@+id/floatBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_book_online_24"
+        android:src="@drawable/baseline_person_pin_24"
         android:backgroundTint="@color/white"
         app:layout_anchor="@id/appBar"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

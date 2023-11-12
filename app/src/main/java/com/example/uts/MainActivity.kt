@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 floatBar.setOnClickListener{
-                    val intent = Intent(this@MainActivity,ReservedActivity::class.java)
+                    val intent = Intent(this@MainActivity,HeroActivity::class.java)
                     startActivity(intent)
                 }
             }
