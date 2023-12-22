@@ -1,17 +1,16 @@
 package com.example.uts
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uts.databinding.ActivityMainBinding
 import com.example.uts.databinding.ItemFilmsBinding
+import com.example.uts.model.Films
+import com.squareup.picasso.Picasso
 
 class FilmAdapter (
-    var films: List<Films>
+    var films: ArrayList<Films>
         ):RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
     inner class FilmViewHolder(val binding:ItemFilmsBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -36,10 +35,7 @@ class FilmAdapter (
         }
         holder.itemView.apply {
             with(holder.binding){
-                filmTitle.text=films[position].title
-                poster.setImageResource(films[position].image)
-                genre.text=films[position].genre
-                rating.text=films[position].rating.toString()
+                Picasso.get().load(films[position].image).into(poster)
             }
         }
     }
@@ -47,5 +43,12 @@ class FilmAdapter (
     override fun getItemCount(): Int {
         return films.size
     }
+
+    fun setData(list: List<Films>){
+        films.clear()
+        films.addAll(list)
+        notifyDataSetChanged()
+    }
+
 
 }

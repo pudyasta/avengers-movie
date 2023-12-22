@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    app:contentPadding="10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rlWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:scaleType="centerCrop"
+            android:layout_height="80dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/poster"
+            android:layout_alignBottom="@+id/poster"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/poster"
+            android:layout_toStartOf="@+id/editButton"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/filmTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/dark_blue"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:text="Title"
+                />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/deleteButton"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_edit_24"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            />
+
+        <!-- Delete button (ImageButton) -->
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_delete_24"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

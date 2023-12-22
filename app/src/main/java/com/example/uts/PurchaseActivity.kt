@@ -3,6 +3,7 @@ package com.example.uts
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.DatePicker
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uts.databinding.ActivityPurchaseBinding
+import com.squareup.picasso.Picasso
 import java.text.DateFormat
 import java.util.*
 
@@ -48,10 +50,11 @@ class PurchaseActivity : AppCompatActivity() ,OnDateSetListener{
         super.onCreate(savedInstanceState)
         val binding = ActivityPurchaseBinding.inflate(layoutInflater)
         val title = intent.getStringExtra("title")
-        val poster = intent.getIntExtra("poster",0)
+        val poster = Uri.parse(intent.getStringExtra("poster"))
 
         with(binding){
-            poster1.setImageResource(poster)
+            Picasso.get().load(poster).into(poster1)
+
             btPickDate.setOnClickListener {
                 val mDatePickerDialogFragment: com.example.uts.DatePicker = DatePicker()
                 mDatePickerDialogFragment.show(supportFragmentManager, "DATE PICK")
@@ -101,7 +104,7 @@ class PurchaseActivity : AppCompatActivity() ,OnDateSetListener{
             submit.setOnClickListener {
                 val intent= Intent(this@PurchaseActivity,ResultActivity::class.java)
                 intent.putExtra("title",title)
-                intent.putExtra("poster",poster)
+                intent.putExtra("poster",poster.toString())
                 intent.putExtra("bioskop",spinnerBioskop.selectedItem.toString())
                 intent.putExtra("seat",spinnerSeat.selectedItem.toString())
                 intent.putExtra("bank",spinnerBank.selectedItem.toString())

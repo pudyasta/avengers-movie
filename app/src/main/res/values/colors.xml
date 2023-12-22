@@ -10,4 +10,8 @@
     <color name="dark_blue">#FF021939</color>
     <color name="gold">#FFD6B06D</color>
     <color name="transparent">#00D6B06D</color>
+    <color name="green">#FF99CC62</color>
+    <color name="red">#FFE45662</color>
+    <color name="yellow">#FFFCCC57</color>
+    <color name="blue">#FF5E98E8</color>
 </resources>

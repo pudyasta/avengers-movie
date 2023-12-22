@@ -1,6 +1,6 @@
 package com.example.uts.api.network
 
-import com.example.uts.api.model.Hero
+import com.example.uts.model.Hero
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call

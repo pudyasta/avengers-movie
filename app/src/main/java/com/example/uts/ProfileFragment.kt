@@ -37,12 +37,16 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("shared", Context.MODE_PRIVATE)
         val binding = FragmentProfileBinding.inflate(inflater, container, false)
+        val username = sharedPreferences.getString("STRING_KEY",null)
+        val email = sharedPreferences.getString("EMAIL",null)
         val view= binding.root
 
         with(binding) {
+            nama.text = username
+            email1.text = email
             logoutBtn.setOnClickListener {
-                val sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("shared", Context.MODE_PRIVATE)
                 sharedPreferences.edit().clear().apply()
 
                 val intent = Intent(requireContext(), LoginActivity::class.java)

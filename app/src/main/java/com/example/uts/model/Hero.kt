@@ -1,4 +1,4 @@
-package com.example.uts.api.model
+package com.example.uts.model
 
 data class Hero(
 	val result: List<ResultItem?>? = null

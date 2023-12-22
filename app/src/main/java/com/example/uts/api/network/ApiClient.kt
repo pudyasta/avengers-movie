@@ -19,6 +19,5 @@ object ApiClient {
             .client(mOkHttpClient)
             .build()
         return builder.create(ApiService::class.java)
-
     }
 }

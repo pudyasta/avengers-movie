@@ -2,7 +2,9 @@ package com.example.uts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.GridLayout
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uts.api.network.ApiClient
 import com.example.uts.databinding.ActivityHeroBinding
@@ -22,10 +24,10 @@ class HeroActivity : AppCompatActivity() {
         val res = client.getAllHeros()
         val heroList = ArrayList<Hero>()
 
-        res.enqueue(object :Callback<com.example.uts.api.model.Hero>{
+        res.enqueue(object :Callback<com.example.uts.model.Hero>{
             override fun onResponse(
-                call: Call<com.example.uts.api.model.Hero>,
-                response: Response<com.example.uts.api.model.Hero>
+                call: Call<com.example.uts.model.Hero>,
+                response: Response<com.example.uts.model.Hero>
             ) {
                 for (i in response.body()!!.result!!){
                     heroList.add(Hero(i?.image,i?.id,i?.title))
@@ -34,11 +36,11 @@ class HeroActivity : AppCompatActivity() {
 
                 with(binding) {
                     recycler.adapter = adapter
-                    recycler.layoutManager = LinearLayoutManager(this@HeroActivity)
+                    recycler.layoutManager = GridLayoutManager(this@HeroActivity,2)
                 }
             }
 
-            override fun onFailure(call: Call<com.example.uts.api.model.Hero>, t: Throwable) {
+            override fun onFailure(call: Call<com.example.uts.model.Hero>, t: Throwable) {
                 Toast.makeText(this@HeroActivity, "Koneksi error",
                     Toast.LENGTH_LONG).show()
 

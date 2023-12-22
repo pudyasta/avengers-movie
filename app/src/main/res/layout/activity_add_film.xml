@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".AddFilmActivity"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/select"/>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_preview"
+        >
+        <TextView
+            android:id="@+id/title_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Judul"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:layout_below="@+id/title_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout"
+        >
+        <TextView
+            android:id="@+id/tipe_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Tipe"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+        <Spinner
+            android:id="@+id/spinner_tipe"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tipe_log_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/catatan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tipe_layout"
+        >
+        <TextView
+            android:id="@+id/catatan_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Deskripsi"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/edit_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:layout_below="@+id/catatan_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/year_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/catatan_layout"
+        >
+        <TextView
+            android:id="@+id/year_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Tahun Rilis"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/year_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/year_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/age_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/year_layout"
+        >
+        <TextView
+            android:id="@+id/age_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Minimum Usia Menonton"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/age_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/age_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/duration_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/age_layout"
+        >
+        <TextView
+            android:id="@+id/duration_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Durasi Film"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/duration_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/duration_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/duration_layout"
+        >
+        <TextView
+            android:id="@+id/rating_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Rating"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/rating_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/rating_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/genre_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/rating_layout"
+        >
+        <TextView
+            android:id="@+id/genre_log_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Genre (Pisahkan dengan koma)"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:id="@+id/genre_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_below="@+id/genre_log_label"
+            android:background="@drawable/input"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genre_layout"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/gold"
+        android:backgroundTint="@color/dark_blue"
+        />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/button_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/gold"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintTop_toBottomOf="@+id/button_save"
+        android:layout_marginTop="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
